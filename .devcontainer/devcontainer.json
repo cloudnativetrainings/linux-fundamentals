@@ -1,6 +1,6 @@
 {
     "name": "Linux Fundamentals Training Labs",
-    "image": "quay.io/kubermatic-labs/devcontainers:linux-fundamentals-8d2d85c",
+    "image": "quay.io/kubermatic-labs/devcontainers:linux-fundamentals-3af1754",
     "customizations": {
       "vscode": {
         "settings": {
@@ -17,8 +17,10 @@
       }
     },
     "remoteUser": "root",
+    "privileged": true,
     "runArgs": [
-      "--network=host"
+      "--network=host",
+      "--cgroupns=host"
     ],
     "forwardPorts": [
       8080,
