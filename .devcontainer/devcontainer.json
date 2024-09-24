@@ -1,6 +1,6 @@
 {
     "name": "Linux Fundamentals Training Labs",
-    "image": "quay.io/kubermatic-labs/devcontainers:linux-fundamentals-3af1754",
+    "image": "quay.io/kubermatic-labs/devcontainers:linux-fundamentals-49b4fc1",
     "customizations": {
       "vscode": {
         "settings": {
@@ -11,7 +11,8 @@
             ".git/": true,
             ".github/": true,
             ".devcontainer/": true,
-            ".99_todos/": true
+            ".99_todos/": true,
+            ".images/": true
           }
         }
       }
@@ -23,8 +24,9 @@
       "--cgroupns=host"
     ],
     "forwardPorts": [
-      8080,
       80,
-      443
-    ]
+      2222,
+      2223
+    ],
+    "postCreateCommand": "/vms/boot-vms.sh"
   }
